@@ -12,6 +12,7 @@
     - "alt" = if adding an external image using objectid option, provide alt text for image
     - "width" = will use responsive sizing to set the % size on desktop (will be 100% on mobile), choose from "25", "50", "75", or "100"
     - "centered" = give "true" to add mx-auto class on the card to center it 
+    - "buttonlink" requires a link which is /collectionbuilder-mockup/[whatever link you want]
 
 {%- endcomment -%}
 {%- if include.objectid contains '/' -%}
@@ -23,7 +24,7 @@
 {%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
 {%- endif -%}
 {%- if include.buttonlink contains '/' -%}
-{%- capture src -%}{{ '/collectionbuilder-mockup' | append:include.buttonlink | relative_url }}{% endcapture %}
+{%- capture src -%}{{ include.buttonlink | relative_url }}{% endcapture %}
 {%- capture alt -%}{{ item.buttontext | default: include.buttontext}}{% endcapture %}
 {%- elsif include.buttonlink -%}
 {%- assign item = site.data[site.metadata] | where: "buttonlink", include.buttonlink | first -%}
