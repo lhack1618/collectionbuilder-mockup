@@ -23,7 +23,7 @@
 {%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
 {%- endif -%}
 {%- if include.buttonlink contains '/' -%}
-{%- capture src -%}{{ include.buttonlink | relative_url }}{% endcapture %}
+{%- capture src -%}{{ '/collectionbuilder-mockup' | append:include.buttonlink | relative_url }}{% endcapture %}
 {%- capture alt -%}{{ item.buttontext | default: include.buttontext}}{% endcapture %}
 {%- elsif include.buttonlink -%}
 {%- assign item = site.data[site.metadata] | where: "buttonlink", include.buttonlink | first -%}
