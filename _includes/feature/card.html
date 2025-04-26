@@ -21,10 +21,11 @@
 {%- assign item = site.data[site.metadata] | where: "objectid", include.objectid | first -%}
 {%- capture src -%}{% if item.filename contains '/' %}{{ item.filename | relative_url }}{% else %}{{ '/objects/' | append: item.filename | relative_url }}{% endif %}{% endcapture %}
 {%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
-{%- if include.buttonlinkn contains '/' -%}
+{%- if include.buttonlink contains '/' -%}
 {%- capture src -%}{{ include.buttonlink | relative_url }}{% endcapture %}
 {%- capture alt -%}{{ item.buttontext | default: include.buttontext}}{% endcapture %}
 {%- elsif include.buttonlink -%}
+{%- assign item = site.data[site.metadata] | where: "buttonlink", include.buttonlink | first -%}
 {%- endif -%}
 <div class="card mb-3{% if include.width %} feature-w-{{ include.width }}{% endif %}{% if include.centered %} mx-auto{% endif %}">
     {% if src %}<img class="card-img-top" src="{{ src }}" alt="{{ alt | escape }}">{%- endif -%}
