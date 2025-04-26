@@ -1,11 +1,11 @@
 display_name,stub,dropdown_parent
 Home,/
-Dropdown Template,, 
-Browse,/browse.html,Dropdown Template
-Subjects,/subjects.html,Dropdown Template
-Locations,/locations.html,Dropdown Template
+Dropdown,,
+Browse,/browse.html,Dropdown
+Subjects,/subjects.html,Dropdown
+Locations,/locations.html,Dropdown
 Map,/map.html,Dropdown Template
-Timeline,/timeline.html,Dropdown Template
-Data,/data.html,Dropdown Template
+Timeline,/timeline.html,Dropdown
+Data,/data.html,Dropdown
 About,/about.html
 Particpants,/participants.html
