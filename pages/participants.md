@@ -5,4 +5,4 @@ permalink: /participants.html
 ---
 some info about the page
 
-{% include feature/card.html header="Participant 1" text="Text for participant 1" objectid="objects/sample_particip1_profile.jpeg" buttontext="participant 1" width="25" centered=true %}
+{% include feature/card.html header="Participant 1" text="Text for participant 1" objectid="objects/sample_particip1_profile.jpeg" buttontext="participant 1" buttonlink="/particip1.html" width="25" centered=true %}
