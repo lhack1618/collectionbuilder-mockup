@@ -21,6 +21,7 @@
 {%- assign item = site.data[site.metadata] | where: "objectid", include.objectid | first -%}
 {%- capture src -%}{% if item.filename contains '/' %}{{ item.filename | relative_url }}{% else %}{{ '/objects/' | append: item.filename | relative_url }}{% endif %}{% endcapture %}
 {%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
+{%- endif -%}
 {%- if include.buttonlink contains '/' -%}
 {%- capture src -%}{{ include.buttonlink | relative_url }}{% endcapture %}
 {%- capture alt -%}{{ item.buttontext | default: include.buttontext}}{% endcapture %}
