@@ -21,6 +21,9 @@
 {%- assign item = site.data[site.metadata] | where: "objectid", include.objectid | first -%}
 {%- capture src -%}{% if item.filename contains '/' %}{{ item.filename | relative_url }}{% else %}{{ '/objects/' | append: item.filename | relative_url }}{% endif %}{% endcapture %}
 {%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
+{%- if include.buttonlinkn contains '/' -%}
+{%- capture src -%}{{ include.buttonlink | relative_url }}{% endcapture %}
+{%- elsif include.buttonlink -%}
 {%- capture alt -%}{{ item.buttontext | default: include.buttontext}}{% endcapture %}
 {%- endif -%}
 <div class="card mb-3{% if include.width %} feature-w-{{ include.width }}{% endif %}{% if include.centered %} mx-auto{% endif %}">
@@ -29,6 +32,6 @@
     <div class="card-body">
         {% if include.title %}<h5 class="card-title">{{ include.title }}</h5>{%- endif -%}
         <div class="card-text">{{ include.text | markdownify }}</div>
-        <a href="#" class="btn btn-primary" href="https://lhack1618.github.io/collectionbuilder-mockup/particip1.html#">{{ include.buttontext }}</a>
+        <a href="#" class="btn btn-primary" href="{{ include.buttonlink }}">{{ include.buttontext }}</a>
     </div>
 </div>
