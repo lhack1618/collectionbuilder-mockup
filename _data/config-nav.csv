@@ -1,9 +1,12 @@
 display_name,stub,dropdown_parent
 Home,/
-Browse,/browse.html
-Subjects,/subjects.html
-Locations,/locations.html
-Map,/map.html
-Timeline,/timeline.html
-Data,/data.html
+Dropdown Template,, 
+#^creates a dropdown heading
+Browse,/browse.html,Dropdown Template
+Subjects,/subjects.html,Dropdown Template
+Locations,/locations.html,Dropdown Template
+Map,/map.html,Dropdown Template
+Timeline,/timeline.html,Dropdown Template
+Data,/data.html,Dropdown Template
 About,/about.html
+Particpants,/participants.html
