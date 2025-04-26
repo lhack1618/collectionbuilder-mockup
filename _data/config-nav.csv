@@ -1,7 +1,6 @@
 display_name,stub,dropdown_parent
 Home,/
 Dropdown Template,, 
-#^creates a dropdown heading
 Browse,/browse.html,Dropdown Template
 Subjects,/subjects.html,Dropdown Template
 Locations,/locations.html,Dropdown Template
