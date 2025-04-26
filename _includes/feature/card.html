@@ -24,7 +24,7 @@
 {%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
 {%- endif -%}
 {%- if include.buttonlink contains '/' -%}
-{%- capture src -%}{{ include.buttonlink | relative_url }}{% endcapture %}
+{%- capture buttonsrc -%}{{ include.buttonlink | relative_url }}{% endcapture %}
 {%- elsif include.buttonlink -%}
 {%- assign item = site.data[site.metadata] | where: "buttonlink", include.buttonlink | first -%}
 {%- endif -%}
