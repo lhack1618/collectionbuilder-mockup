@@ -16,7 +16,7 @@
 
 {%- endcomment -%}
 {%- if include.objectid contains '/' -%}
-{%- capture src -%}{{ include.objectid | relative_url }}{% endcapture %}
+{%- capture src -%}{{ '/collectionbuilder-mockup/blob/main/objects/' | append" include.objectid | relative_url }}{% endcapture %}
 {%- capture alt -%}{{ include.alt | default: include.title }}{% endcapture %}
 {%- elsif include.objectid -%}
 {%- assign item = site.data[site.metadata] | where: "objectid", include.objectid | first -%}
