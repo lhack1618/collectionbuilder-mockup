@@ -1,0 +1,61 @@
+{% comment %}
+
+    Bootstrap Card, https://getbootstrap.com/docs/5.1/components/card/
+
+    E.G. --> {% include feature/card.html text="Some text" header="Example item" objectid="demo_004" %}
+
+    Options:
+    - "text" = main card text, can use markdown formatting (tip: use a Liquid capture to add more complex content)
+    - "header" = card header text (in bar above card content)
+    - "title" = card title text inside card content area
+    - "objectid" = the given object or link to external image will create a card cap image
+    - "alt" = if adding an external image using objectid option, provide alt text for image
+    - "width" = will use responsive sizing to set the % size on desktop (will be 100% on mobile), choose from "25", "50", "75", or "100"
+    - "centered" = give "true" to add mx-auto class on the card to center it 
+    - "buttonlink" requires a link which is /collectionbuilder-mockup/[whatever link you want]
+
+I think row-cols-md-3 means 3 items (column) per row, medium size.
+{% endcomment %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://lhack1618.github.io/collectionbuilder-mockup/blob/main/objects/sample_particip1_profile.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Participant 1</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-primary" href="https://lhack1618.github.io/collectionbuilder-mockup/particip1.html">Participant 1</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Participant 2</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-primary" href="https://lhack1618.github.io/collectionbuilder-mockup/particip1.html">Participant 2</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Participant 3</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-primary" href="https://lhack1618.github.io/collectionbuilder-mockup/particip1.html">Participant 3</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Participant 4</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-primary" href="https://lhack1618.github.io/collectionbuilder-mockup/particip1.html">Participant 4</a>
+      </div>
+    </div>
+  </div>
+</div>
